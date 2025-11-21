@@ -16,17 +16,18 @@ int Hand::getTotal() const
 {
     int total = 0;
     int aceCount = 0;
-    string aVal;
 
-    for (const auto& card : cards) {
+    for (const auto& card : cards) 
+    {
         total += card.getVal();
-        if (card.getRank() == Card::rank::ACE){
+        if (card.getRank() == Card::rank::ACE)
+        {
             aceCount++;
         }
-        
     }
 
-    while (aceCount > 0 && total + 10 <= 21) {
+    while (aceCount > 0 && total + 10 <= 21) 
+    {
         total += 10;
         aceCount--;
     }
@@ -34,11 +35,16 @@ int Hand::getTotal() const
     return total;
 }
 
-void Hand::printHand(bool hideFirst) const {
-    for (size_t i = 0; i < cards.size(); ++i) {
-        if (hideFirst && i == 0) {
+void Hand::printHand(bool hideFirst) const 
+{
+    for (size_t i = 0; i < cards.size(); ++i) 
+    {
+        if (hideFirst && i == 0) 
+        {
             std::cout << "?? ";
-        } else {
+        } 
+        else 
+        {
             std::cout << cards[i].toString() << " ";
         }
     }

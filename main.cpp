@@ -1,7 +1,21 @@
 #include <iostream>
 #include "game.h"
+
 using namespace std;
 
+/*
+void printDeck(Deck d) 
+    {
+    
+    while (!d.isEmpty()) 
+    {
+        
+        Card card = d.dealCard();
+        std::cout << card.toString() << " (Value: " << card.getVal() << ")\n";
+    }
+
+    }
+    */
 int main() {
     char choice;
     cout << "Welcome to Blackjack!" << endl;
@@ -15,5 +29,8 @@ int main() {
         
     }    
     cout << "Thanks for playing!" << endl;
+    
     return 0;
 }
+
+

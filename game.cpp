@@ -47,7 +47,7 @@ void Game::playerTurn()
 
 void Game::dealerTurn()
 {
-    showHands(false);
+   // showHands(false);
     while (dealer.getTotal() < 17) 
     {
         cout << "Dealer hits." << std::endl;
@@ -111,6 +111,5 @@ void Game::play()
         showResult();
     } while (askPlayAgain());
 }
-
 
 

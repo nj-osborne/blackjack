@@ -14,7 +14,14 @@ Card::suit Card::getSuit() const {
     }
 
 int Card::getVal() const {
-        return val;
+    int r = static_cast<int>(rnk);
+    if (r >= 2 <= 10 )
+    return r;
+
+    if (r >=11 && r <=13)
+    return r = 10;
+    
+    return 11;
 }
 
 string Card::toString() const {
