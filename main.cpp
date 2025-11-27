@@ -1,9 +1,10 @@
 #include <iostream>
 #include "game.h"
 
+//Using declaration
 using namespace std;
 
-
+//Entry point of the program and runs the game.
 int main() {
     char choice;
     cout << "Welcome to Blackjack!" << endl;

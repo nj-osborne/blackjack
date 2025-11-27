@@ -2,19 +2,26 @@
 #include <string>
 #include <iostream>
 
-
+//Constructor for the Card class.
 Card::Card(rank r,suit s, int v) : rnk(r), st(s), val(v) {}
+
+//Gets the rank of the card.
 
 Card::rank Card::getRank() const {
         return rnk;
     }
 
+//Gets the suit of the card.
+
 Card::suit Card::getSuit() const {
         return st;
     }
 
+
+//Gets the value of the card.
 int Card::getVal() const {
     int r = static_cast<int>(rnk);
+    
     if (r >= 2 <= 10 )
     return r;
 
@@ -23,6 +30,8 @@ int Card::getVal() const {
     
     return 11;
 }
+
+//returns a string representation of the card.
 
 string Card::toString() const {
     string rankStr;

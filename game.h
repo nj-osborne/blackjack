@@ -2,6 +2,7 @@
 #include "hand.h"
 #pragma once
 
+//Game class to manage the overall game logic.
 class Game {
 public:
     Deck deck;

@@ -4,7 +4,7 @@
 #include <algorithm>
 #pragma once
 
-
+//Hand class to manage a player's hand of cards.
 class Hand {
     private:
     std::vector<Card> cards;

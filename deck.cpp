@@ -5,16 +5,17 @@
 #include <stdexcept>
 
 
-    
+// Using declarations
 using std::vector;
 using std::string;
 
 
-
+// Checks if the deck is empty.
 bool Deck::isEmpty() const {
     return index >= cards.size();
 }
 
+// Constructor for the Deck class.
 Deck::Deck() : index(0) {
     for (int s = 0; s < 4; ++s) {
         for (int r = 1; r <= 13; ++r) {
@@ -26,6 +27,7 @@ Deck::Deck() : index(0) {
     }
 }
 
+//Shuffles the deck of cards.
 void Deck::shuffle()
 {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
@@ -33,6 +35,7 @@ void Deck::shuffle()
     index = 0;
 }
 
+//Deals a card from the deck.
 Card Deck::dealCard()
 {
     if (isEmpty()) {

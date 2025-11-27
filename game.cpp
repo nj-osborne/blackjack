@@ -6,13 +6,13 @@
 using std::cout;
 using std::cin;
 
-
+//Starts the game by initializing the deck and shuffling it.
 Game::Game() {
     deck.shuffle();
 }
 
 
-
+//Deals the initial two cards to player and dealer.
 void Game::dealInitialCards() 
 {
     player.clearHand();
@@ -23,6 +23,8 @@ void Game::dealInitialCards()
     player.addCard(deck.dealCard());
     dealer.addCard(deck.dealCard());
 }
+
+//Handles the player's turn.
 
 void Game::playerTurn()
 {
@@ -44,6 +46,7 @@ void Game::playerTurn()
     }while (choice != 's');
 }
 
+//Handles the dealer's turn.
 
 void Game::dealerTurn()
 {
@@ -62,6 +65,7 @@ void Game::dealerTurn()
 
 }
 
+//Displays the hands of both player and dealer.
 
 void Game::showHands(bool hideDealerCard) const {
     std::cout << "Dealer: ";
@@ -72,6 +76,8 @@ void Game::showHands(bool hideDealerCard) const {
 
     std::cout << "\n";
 }
+
+//Determines and displays the result of the game.
 
 void Game::showResult() const {
     int p = player.getTotal();
@@ -84,6 +90,8 @@ void Game::showResult() const {
     else                std::cout << "Push (tie).\n";
 }
 
+//Asks the player if they want to play again.
+
 bool Game::askPlayAgain() const
 {
     char c;
@@ -94,6 +102,8 @@ bool Game::askPlayAgain() const
     else
         return false;
 }
+
+//Main game loop.
 
 void Game::play()
 {
