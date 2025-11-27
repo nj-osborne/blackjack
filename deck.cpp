@@ -19,8 +19,8 @@ Deck::Deck() : index(0) {
     for (int s = 0; s < 4; ++s) {
         for (int r = 1; r <= 13; ++r) {
             cards.emplace_back(
-                static_cast<Card::rank>(r)
-                ,static_cast<Card::suit>(s),
+                static_cast<Card::rank>(r),
+                static_cast<Card::suit>(s),
                 0);
         }
     }
